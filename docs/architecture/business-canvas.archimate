@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="vCluster Business Model Canvas" id="vcluster-business-canvas-model" version="5.0.0">
+  <folder name="Strategy" id="id-strategy-folder" type="strategy">
+    <!-- Value Propositions -->
+    <element xsi:type="archimate:Value" name="Isolated Kubernetes Environments" id="id-value-1">
+      <documentation>Provide secure, multi-tenant Kubernetes clusters within a single physical cluster, enabling cost-effective isolation for development, testing, and production workloads</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Cost Optimization" id="id-value-2">
+      <documentation>Reduce infrastructure costs by 60-80% through efficient resource sharing and virtualization while maintaining security boundaries</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Developer Self-Service" id="id-value-3">
+      <documentation>Enable developers to provision and manage their own Kubernetes environments in minutes without platform team intervention</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Enterprise-Grade Security" id="id-value-4">
+      <documentation>Meet SOC 2, ISO 27001, and GDPR compliance requirements with built-in isolation, encryption, and audit capabilities</documentation>
+    </element>
+    
+    <!-- Customer Segments -->
+    <element xsi:type="archimate:Stakeholder" name="Enterprise DevOps Teams" id="id-customer-1">
+      <documentation>Large organizations requiring multiple isolated Kubernetes environments for different teams, projects, or clients</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="SaaS Platform Providers" id="id-customer-2">
+      <documentation>Companies offering Kubernetes-based platforms requiring tenant isolation and cost efficiency</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Development Agencies" id="id-customer-3">
+      <documentation>Agencies managing multiple client projects requiring isolated, cost-effective Kubernetes environments</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Educational Institutions" id="id-customer-4">
+      <documentation>Universities and training organizations providing hands-on Kubernetes environments for students</documentation>
+    </element>
+    
+    <!-- Key Resources -->
+    <element xsi:type="archimate:Resource" name="vCluster Technology Platform" id="id-resource-1">
+      <documentation>Core virtualization engine enabling Kubernetes cluster virtualization with lightweight resource overhead</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Kubernetes Expertise" id="id-resource-2">
+      <documentation>Deep technical knowledge of Kubernetes internals, security, and multi-tenancy patterns</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Open Source Community" id="id-resource-3">
+      <documentation>Active contributor base and ecosystem partnerships providing extensions and integrations</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Cloud Infrastructure" id="id-resource-4">
+      <documentation>Scalable hosting infrastructure for managed vCluster offerings and control plane services</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Security Certifications" id="id-resource-5">
+      <documentation>SOC 2 Type II, ISO 27001, and compliance documentation enabling enterprise sales</documentation>
+    </element>
+    
+    <!-- Key Capabilities -->
+    <element xsi:type="archimate:Capability" name="Cluster Virtualization" id="id-capability-1">
+      <documentation>Ability to create lightweight, isolated Kubernetes control planes running inside host clusters</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Multi-Tenancy Management" id="id-capability-2">
+      <documentation>Capability to manage network isolation, resource quotas, and security policies across virtual clusters</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Enterprise Support" id="id-capability-3">
+      <documentation>24/7 technical support, SLA management, and dedicated customer success for enterprise clients</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Platform Integration" id="id-capability-4">
+      <documentation>Seamless integration with CI/CD pipelines, GitOps workflows, and cloud provider services</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Compliance Management" id="id-capability-5">
+      <documentation>Continuous monitoring, audit logging, and compliance reporting for regulated industries</documentation>
+    </element>
+    
+    <!-- Key Activities -->
+    <element xsi:type="archimate:CourseOfAction" name="Product Development" id="id-activity-1">
+      <documentation>Continuous enhancement of vCluster core features, performance optimization, and security hardening</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Community Building" id="id-activity-2">
+      <documentation>Growing open source adoption through documentation, tutorials, and ecosystem partnerships</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Enterprise Sales" id="id-activity-3">
+      <documentation>Direct sales to Fortune 500 companies requiring compliance, SLAs, and dedicated support</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Customer Success" id="id-activity-4">
+      <documentation>Onboarding, training, and ongoing optimization support ensuring customer retention and expansion</documentation>
+    </element>
+    
+    <!-- Key Partners -->
+    <element xsi:type="archimate:Stakeholder" name="Cloud Providers (AWS/Azure/GCP)" id="id-partner-1">
+      <documentation>Strategic partnerships for marketplace distribution and managed service offerings</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="CNCF Ecosystem" id="id-partner-2">
+      <documentation>Collaboration with Kubernetes community and complementary projects (Argo, Flux, Helm)</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Security Vendors" id="id-partner-3">
+      <documentation>Integration partners for vulnerability scanning, policy enforcement, and compliance tools</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Consulting Partners" id="id-partner-4">
+      <documentation>System integrators and consulting firms delivering vCluster implementations</documentation>
+    </element>
+    
+    <!-- Channels -->
+    <element xsi:type="archimate:CourseOfAction" name="Open Source Distribution" id="id-channel-1">
+      <documentation>GitHub repository with Apache 2.0 license driving community adoption and brand awareness</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Cloud Marketplaces" id="id-channel-2">
+      <documentation>AWS, Azure, and GCP marketplace listings for frictionless enterprise procurement</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Direct Enterprise Sales" id="id-channel-3">
+      <documentation>Inside sales team targeting Fortune 1000 companies with compliance requirements</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Partner Channel" id="id-channel-4">
+      <documentation>Reseller and consulting partner network for implementation services</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Developer Marketing" id="id-channel-5">
+      <documentation>Technical content, conference talks, and developer advocacy building thought leadership</documentation>
+    </element>
+    
+    <!-- Customer Relationships -->
+    <element xsi:type="archimate:CourseOfAction" name="Community Support" id="id-relationship-1">
+      <documentation>Slack community, GitHub discussions, and community forums for self-service support</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Dedicated Account Management" id="id-relationship-2">
+      <documentation>Named CSMs for enterprise accounts providing strategic guidance and escalation management</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Self-Service Portal" id="id-relationship-3">
+      <documentation>Documentation, tutorials, and automated onboarding reducing time-to-value</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Professional Services" id="id-relationship-4">
+      <documentation>Implementation, migration, and optimization services for complex deployments</documentation>
+    </element>
+    
+    <!-- Revenue Streams -->
+    <element xsi:type="archimate:Value" name="Enterprise Subscriptions" id="id-revenue-1">
+      <documentation>Annual contracts for enterprise features: $50K-500K per year based on cluster count and support level</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Managed Service" id="id-revenue-2">
+      <documentation>Fully-managed vCluster platform with 99.9% SLA: Usage-based pricing at $0.10-0.30 per vCluster-hour</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Professional Services" id="id-revenue-3">
+      <documentation>Implementation, training, and consulting: $200-300 per hour with typical engagements of $50K-200K</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Marketplace Commissions" id="id-revenue-4">
+      <documentation>Revenue share from cloud marketplace transactions (typically 70-80% of subscription value)</documentation>
+    </element>
+    <element xsi:type="archimate:Value" name="Partner Referral Fees" id="id-revenue-5">
+      <documentation>Commission payments to consulting partners: 15-20% of first-year contract value</documentation>
+    </element>
+    
+    <!-- Cost Structure -->
+    <element xsi:type="archimate:Assessment" name="Product Development Costs" id="id-cost-1">
+      <documentation>Engineering team salaries, cloud infrastructure for testing, third-party tools and services: $2-4M annually</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Cloud Infrastructure" id="id-cost-2">
+      <documentation>Hosting costs for managed service, demo environments, and CI/CD pipelines: $500K-1M annually</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Sales and Marketing" id="id-cost-3">
+      <documentation>Sales team compensation, marketing programs, events, and partner enablement: $1.5-3M annually</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Customer Support" id="id-cost-4">
+      <documentation>Support engineers, customer success managers, and training programs: $800K-1.5M annually</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Compliance and Security" id="id-cost-5">
+      <documentation>Security audits, certifications (SOC 2, ISO 27001), penetration testing, bug bounty: $200K-400K annually</documentation>
+    </element>
+  </folder>
+  
+  <folder name="Business" id="id-business-folder" type="business">
+    <element xsi:type="archimate:BusinessActor" name="Product Management" id="id-actor-1"/>
+    <element xsi:type="archimate:BusinessActor" name="Engineering" id="id-actor-2"/>
+    <element xsi:type="archimate:BusinessActor" name="Sales" id="id-actor-3"/>
+    <element xsi:type="archimate:BusinessActor" name="Customer Success" id="id-actor-4"/>
+  </folder>
+  
+  <folder name="Relations" id="id-relations-folder" type="relations">
+    <!-- Value to Customer Segment -->
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-1" source="id-value-1" target="id-customer-1"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-2" source="id-value-2" target="id-customer-2"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-3" source="id-value-3" target="id-customer-3"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-4" source="id-value-4" target="id-customer-1"/>
+    
+    <!-- Resource to Capability -->
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-5" source="id-resource-1" target="id-capability-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-6" source="id-resource-2" target="id-capability-2"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-7" source="id-resource-5" target="id-capability-5"/>
+    
+    <!-- Capability to Value -->
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-8" source="id-capability-1" target="id-value-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-9" source="id-capability-2" target="id-value-2"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-10" source="id-capability-5" target="id-value-4"/>
+    
+    <!-- Activity to Capability -->
+    <element xsi:type="archimate:ServingRelationship" id="id-rel-11" source="id-activity-1" target="id-capability-1"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-rel-12" source="id-activity-4" target="id-capability-3"/>
+    
+    <!-- Partner to Activity -->
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-13" source="id-partner-1" target="id-activity-3"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-14" source="id-partner-4" target="id-activity-4"/>
+    
+    <!-- Channel to Customer -->
+    <element xsi:type="archimate:ServingRelationship" id="id-rel-15" source="id-channel-1" target="id-customer-3"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-rel-16" source="id-channel-3" target="id-customer-1"/>
+    <element xsi:type="archimate:ServingRelationship" id="id-rel-17" source="id-channel-2" target="id-customer-2"/>
+    
+    <!-- Revenue to Activity -->
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-18" source="id-revenue-1" target="id-activity-3"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-19" source="id-revenue-3" target="id-activity-4"/>
+    
+    <!-- Cost to Activity -->
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-20" source="id-cost-1" target="id-activity-1"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-21" source="id-cost-3" target="id-activity-3"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-rel-22" source="id-cost-4" target="id-activity-4"/>
+  </folder>
+  
+  <folder name="Views" id="id-views-folder" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Business Model Canvas Overview" id="id-view-1">
+      <child xsi:type="archimate:DiagramObject" id="id-diag-value-1" archimateElement="id-value-1" type="1">
+        <bounds x="300" y="50" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-diag-customer-1" archimateElement="id-customer-1" type="1">
+        <bounds x="600" y="50" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-diag-resource-1" archimateElement="id-resource-1" type="1">
+        <bounds x="50" y="150" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-diag-capability-1" archimateElement="id-capability-1" type="1">
+        <bounds x="300" y="150" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-diag-revenue-1" archimateElement="id-revenue-1" type="1">
+        <bounds x="600" y="250" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-diag-cost-1" archimateElement="id-cost-1" type="1">
+        <bounds x="50" y="250" width="120" height="55"/>
+      </child>
+    </element>
+  </folder>
+  
+  <purpose>Business Model Canvas for vCluster platform defining value propositions, customer segments, revenue streams, cost structure, key resources, capabilities, activities, partners, channels, and customer relationships to guide strategic planning and enterprise architecture development</purpose>
+</archimate:model>
