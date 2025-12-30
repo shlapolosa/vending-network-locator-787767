@@ -24,3 +24,4 @@ spec:
 ## Current Services
 
 - (Services will be listed here as they are added)
+- vending-network-locator-787767 (python/fastapi)
