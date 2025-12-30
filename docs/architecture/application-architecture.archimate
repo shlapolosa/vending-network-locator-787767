@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="n8n Workflow Automation - Application Architecture" id="app-arch-model-n8n" version="5.0.0">
+  <folder name="Application" id="application-folder" type="application">
+    <element xsi:type="archimate:ApplicationComponent" name="n8n Workflow Engine" id="comp-1">
+      <documentation>Core workflow automation engine that orchestrates the architecture generation process</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Slack Integration Service" id="comp-2">
+      <documentation>Manages bidirectional communication with Slack workspace for notifications and updates</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="AI Architecture Generator" id="comp-3">
+      <documentation>AI-powered service for generating ArchiMate models and architecture artifacts</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Phase Orchestrator" id="comp-4">
+      <documentation>Controls execution flow through Business, Application, Infrastructure, and Implementation phases</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="ArchiMate Model Builder" id="comp-5">
+      <documentation>Constructs valid ArchiMate XML models in Archi-compatible format</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Document Generator" id="comp-6">
+      <documentation>Creates architecture documentation and implementation plans</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Workflow Execution API" id="svc-1">
+      <documentation>REST API for triggering and managing workflow executions</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Slack Messaging Service" id="svc-2">
+      <documentation>Service for posting messages and status updates to Slack channels</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Architecture Generation Service" id="svc-3">
+      <documentation>Service providing AI-driven architecture model generation capabilities</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Model Validation Service" id="svc-4">
+      <documentation>Validates ArchiMate XML against schema and best practices</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="Slack Bot API" id="iface-1">
+      <documentation>HTTP endpoint for Slack bot interactions (B094YE26G87)</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="n8n Webhook Interface" id="iface-2">
+      <documentation>Webhook endpoint for external workflow triggers</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="ArchiMate XML Export" id="iface-3">
+      <documentation>Interface for exporting generated models in .archimate format</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Workflow Definition" id="data-1">
+      <documentation>JSON-based workflow configuration (VsPoZDZsjn95nH56)</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Architecture Model XML" id="data-2">
+      <documentation>ArchiMate 3.x XML model data in Archi-compatible format</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Phase Status Data" id="data-3">
+      <documentation>Current execution state for Business, Application, Infrastructure phases</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Slack Message Payload" id="data-4">
+      <documentation>Formatted message content with emoji and markdown for Slack</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Process Business Architecture" id="func-1">
+      <documentation>Phase 1: Generates business capability and process models</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Design Application Architecture" id="func-2">
+      <documentation>Phase 2: Creates application component and service models</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Plan Infrastructure" id="func-3">
+      <documentation>Phase 3: Designs technology infrastructure and deployment architecture</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Create Implementation Plan" id="func-4">
+      <documentation>Phase 4: Generates implementation roadmap and migration strategy</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Send Progress Updates" id="func-5">
+      <documentation>Posts real-time status updates to Slack channel C0952L4JNHH</documentation>
+    </element>
+  </folder>
+  <folder name="Relations" id="relations-folder" type="relations">
+    <element xsi:type="archimate:ServingRelationship" id="rel-1" source="comp-1" target="svc-1"/>
+    <element xsi:type="archimate:ServingRelationship" id="rel-2" source="comp-2" target="svc-2"/>
+    <element xsi:type="archimate:ServingRelationship" id="rel-3" source="comp-3" target="svc-3"/>
+    <element xsi:type="archimate:ServingRelationship" id="rel-4" source="comp-5" target="svc-4"/>
+    <element xsi:type="archimate:CompositionRelationship" id="rel-5" source="comp-1" target="comp-4"/>
+    <element xsi:type="archimate:CompositionRelationship" id="rel-6" source="comp-1" target="comp-3"/>
+    <element xsi:type="archimate:CompositionRelationship" id="rel-7" source="comp-1" target="comp-5"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-8" source="comp-4" target="func-1"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-9" source="comp-4" target="func-2"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-10" source="comp-4" target="func-3"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-11" source="comp-4" target="func-4"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-12" source="comp-2" target="func-5"/>
+    <element xsi:type="archimate:AccessRelationship" id="rel-13" source="comp-1" target="data-1" accessType="1"/>
+    <element xsi:type="archimate:AccessRelationship" id="rel-14" source="comp-5" target="data-2" accessType="3"/>
+    <element xsi:type="archimate:AccessRelationship" id="rel-15" source="comp-4" target="data-3" accessType="3"/>
+    <element xsi:type="archimate:AccessRelationship" id="rel-16" source="comp-2" target="data-4" accessType="3"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-17" source="iface-1" target="svc-2"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-18" source="iface-2" target="svc-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-19" source="iface-3" target="svc-4"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-20" source="func-1" target="func-2"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-21" source="func-2" target="func-3"/>
+    <element xsi:type="archimate:FlowRelationship" id="rel-22" source="func-3" target="func-4"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="rel-23" source="func-5" target="comp-2"/>
+    <element xsi:type="archimate:AssociationRelationship" id="rel-24" source="comp-3" target="comp-5"/>
+    <element xsi:type="archimate:AssociationRelationship" id="rel-25" source="comp-5" target="comp-6"/>
+  </folder>
+  <folder name="Views" id="views-folder" type="diagrams"/>
+  <purpose>Application Architecture for n8n-powered workflow automation system that generates enterprise architecture models and provides real-time progress updates via Slack integration</purpose>
+</archimate:model>
