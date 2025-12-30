@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="vCluster Comprehensive Business Architecture" id="vcluster-business-arch" version="5.0.0">
+  
+  <folder name="Motivation" id="motivation-folder" type="motivation">
+    <!-- Strategic Goals -->
+    <element xsi:type="archimate:Goal" name="Become Market Leader in Kubernetes Multi-Tenancy" id="goal-1">
+      <documentation>Achieve 40% market share in enterprise Kubernetes virtualization by 2026</documentation>
+    </element>
+    <element xsi:type="archimate:Goal" name="Achieve $50M ARR by 2025" id="goal-2">
+      <documentation>Scale revenue through enterprise subscriptions and managed services</documentation>
+    </element>
+    <element xsi:type="archimate:Goal" name="Build Sustainable Open Source Community" id="goal-3">
+      <documentation>Grow to 10K+ GitHub stars and 500+ active contributors</documentation>
+    </element>
+    <element xsi:type="archimate:Goal" name="Achieve Enterprise Security Compliance" id="goal-4">
+      <documentation>Maintain SOC 2 Type II, ISO 27001, and industry-specific certifications</documentation>
+    </element>
+    
+    <!-- Business Drivers -->
+    <element xsi:type="archimate:Driver" name="Cloud Cost Optimization Pressure" id="driver-1">
+      <documentation>Enterprises seeking 60-80% reduction in Kubernetes infrastructure costs</documentation>
+    </element>
+    <element xsi:type="archimate:Driver" name="Multi-Tenancy Security Requirements" id="driver-2">
+      <documentation>Increasing regulatory demands for workload isolation and data sovereignty</documentation>
+    </element>
+    <element xsi:type="archimate:Driver" name="Developer Productivity Demands" id="driver-3">
+      <documentation>Need for self-service environments reducing time-to-environment from weeks to minutes</documentation>
+    </element>
+    <element xsi:type="archimate:Driver" name="Platform Engineering Adoption" id="driver-4">
+      <documentation>Shift toward internal developer platforms requiring flexible multi-tenancy</documentation>
+    </element>
+    <element xsi:type="archimate:Driver" name="Kubernetes Complexity" id="driver-5">
+      <documentation>Organizations struggling with operational overhead of managing multiple clusters</documentation>
+    </element>
+    
+    <!-- Assessments -->
+    <element xsi:type="archimate:Assessment" name="Market Opportunity Assessment" id="assess-1">
+      <documentation>$2.5B TAM in Kubernetes management; 25% CAGR through 2028</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Competitive Positioning Analysis" id="assess-2">
+      <documentation>Strong differentiation vs namespace-based isolation; competitive with Kamaji, Cluster API</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Technology Maturity Evaluation" id="assess-3">
+      <documentation>vCluster v0.19+ production-ready; proven at scale with 1000+ virtual clusters</documentation>
+    </element>
+    <element xsi:type="archimate:Assessment" name="Risk Assessment" id="assess-4">
+      <documentation>Key risks: Kubernetes API changes, cloud provider competition, open-source sustainability</documentation>
+    </element>
+    
+    <!-- Principles -->
+    <element xsi:type="archimate:Principle" name="Open Source First" id="principle-1">
+      <documentation>Core platform remains open source to drive adoption and community innovation</documentation>
+    </element>
+    <element xsi:type="archimate:Principle" name="Kubernetes Native" id="principle-2">
+      <documentation>Leverage standard Kubernetes APIs and patterns for seamless integration</documentation>
+    </element>
+    <element xsi:type="archimate:Principle" name="Security by Default" id="principle-3">
+      <documentation>Zero-trust architecture with encryption, isolation, and audit capabilities built-in</documentation>
+    </element>
+    <element xsi:type="archimate:Principle" name="Customer Success Obsession" id="principle-4">
+      <documentation>Prioritize customer outcomes over feature velocity; measure success by customer retention</documentation>
+    </element>
+    
+    <!-- Stakeholders -->
+    <element xsi:type="archimate:Stakeholder" name="Enterprise IT Leaders" id="stakeholder-1">
+      <documentation>VPs and Directors of Platform Engineering seeking cost optimization and governance</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="DevOps Engineers" id="stakeholder-2">
+      <documentation>Practitioners managing Kubernetes infrastructure and developer environments</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Application Developers" id="stakeholder-3">
+      <documentation>End users consuming virtual clusters for development and testing</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Security and Compliance Teams" id="stakeholder-4">
+      <documentation>Teams responsible for ensuring regulatory compliance and security posture</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Cloud Financial Management" id="stakeholder-5">
+      <documentation>FinOps teams tracking and optimizing cloud infrastructure spending</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Open Source Contributors" id="stakeholder-6">
+      <documentation>Community members contributing code, documentation, and ecosystem integrations</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Investors and Board" id="stakeholder-7">
+      <documentation>Financial stakeholders focused on growth metrics, unit economics, and market expansion</documentation>
+    </element>
+    
+    <!-- Requirements -->
+    <element xsi:type="archimate:Requirement" name="99.9% Platform Availability SLA" id="req-1">
+      <documentation>Enterprise SLA requirement for managed service offering</documentation>
+    </element>
+    <element xsi:type="archimate:Requirement" name="Sub-5 Minute Cluster Provisioning" id="req-2">
+      <documentation>Performance requirement for developer self-service experience</documentation>
+    </element>
+    <element xsi:type="archimate:Requirement" name="Support 1000+ vClusters per Host" id="req-3">
+      <documentation>Scalability requirement for large enterprise deployments</documentation>
+    </element>
+    <element xsi:type="archimate:Requirement" name="Multi-Cloud Portability" id="req-4">
+      <documentation>Functional requirement to operate across AWS, Azure, GCP, and on-premises</documentation>
+    </element>
+    <element xsi:type="archimate:Requirement" name="Comprehensive Audit Logging" id="req-5">
+      <documentation>Compliance requirement for SOC 2 and enterprise security standards</documentation>
+    </element>
+  </folder>
+  
+  <folder name="Strategy" id="strategy-folder" type="strategy">
+    <!-- Core Capabilities -->
+    <element xsi:type="archimate:Capability" name="Virtual Cluster Orchestration" id="cap-1">
+      <documentation>Lifecycle management of virtual Kubernetes control planes with scheduling and resource optimization</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Multi-Tenant Isolation" id="cap-2">
+      <documentation>Network, compute, and storage isolation between virtual clusters using namespace virtualization</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Identity and Access Management" id="cap-3">
+      <documentation>Federated authentication, RBAC, and service account management across virtual clusters</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Resource Optimization" id="cap-4">
+      <documentation>Intelligent scheduling, bin packing, and over-subscription to maximize host cluster efficiency</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Observability and Monitoring" id="cap-5">
+      <documentation>Centralized metrics, logs, and traces across virtual and host clusters</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Policy Enforcement" id="cap-6">
+      <documentation>Automated enforcement of security policies, resource quotas, and compliance controls</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Backup and Disaster Recovery" id="cap-7">
+      <documentation>Automated backup of virtual cluster state with point-in-time recovery</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="API and Integrations" id="cap-8">
+      <documentation>RESTful APIs and webhooks for platform integration with CI/CD, GitOps, and service catalogs</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Enterprise Support and SLA Management" id="cap-9">
+      <documentation>24/7 incident response, proactive monitoring, and SLA tracking for enterprise customers</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Marketplace and Ecosystem Management" id="cap-10">
+      <documentation>Curated catalog of integrations, plugins, and certified partner solutions</documentation>
+    </element>
+    
+    <!-- Strategic Resources -->
+    <element xsi:type="archimate:Resource" name="vCluster Core Engine" id="res-1">
+      <documentation>Open source virtualization layer with 50K+ lines of Go code, Apache 2.0 licensed</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Enterprise Control Plane" id="res-2">
+      <documentation>Multi-tenant SaaS platform managing customer virtual clusters with HA architecture</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Kubernetes Engineering Team" id="res-3">
+      <documentation>25+ engineers with deep Kubernetes internals expertise; avg 5+ years K8s experience</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Customer Success Organization" id="res-4">
+      <documentation>Dedicated CSMs, solutions architects, and support engineers; 1:15 CSM ratio</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Partner Ecosystem" id="res-5">
+      <documentation>50+ technology and consulting partners with certified integrations</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Documentation and Knowledge Base" id="res-6">
+      <documentation>1000+ pages of technical documentation, runbooks, and best practices</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Security and Compliance Framework" id="res-7">
+      <documentation>SOC 2 Type II certified processes, security playbooks, and incident response procedures</documentation>
+    </element>
+    <element xsi:type="archimate:Resource" name="Brand and Community Assets" id="res-8">
+      <documentation>15K+ GitHub stars, 5K Slack members, strong developer mindshare in cloud-native space</documentation>
+    </element>
+    
+    <!-- Courses of Action -->
+    <element xsi:type="archimate:CourseOfAction" name="Enterprise Market Expansion Strategy" id="action-1">
+      <documentation>Target Fortune 1000 with compliance-focused messaging; land-and-expand from $50K to $500K+ accounts</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Platform Vendor Partnerships" id="action-2">
+      <documentation>Embed vCluster into Kubernetes distributions and internal developer platforms (Backstage, Port, etc.)</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Managed Service Launch" id="action-3">
+      <documentation>Launch fully-managed vCluster platform reducing operational burden for customers</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Geographic Expansion" id="action-4">
+      <documentation>Establish presence in EMEA and APAC with local sales, support, and data residency</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Vertical Market Specialization" id="action-5">
+      <documentation>Build industry-specific solutions for financial services, healthcare, and government sectors</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Open Source Community Investment" id="action-6">
+      <documentation>Fund contributor grants, host community events, and expand maintainer team</documentation>
+    </element>
+    <element xsi:type="archimate:CourseOfAction" name="Product-Led Growth Engine" id="action-7">
+      <documentation>Freemium model with usage-based upgrade paths from open source to enterprise</documentation>
+    </element>
+  </folder>
+  
+  <folder name="Business" id="business-folder" type="business">
+    <!-- Business Actors -->
+    <element xsi:type="archimate:BusinessActor" name="Chief Executive Officer" id="actor-1"/>
+    <element xsi:type="archimate:BusinessActor" name="Chief Technology Officer" id="actor-2"/>
+    <element xsi:type="archimate:BusinessActor" name="Chief Revenue Officer" id="actor-3"/>
+    <element xsi:type="archimate:BusinessActor" name="VP Engineering" id="actor-4"/>
+    <element xsi:type="archimate:BusinessActor" name="VP Product Management" id="actor-5"/>
+    <element xsi:type="archimate:BusinessActor" name="VP Sales" id="actor-6"/>
+    <element xsi:type="archimate:BusinessActor" name="VP Customer Success" id="actor-7"/>
+    <element xsi:type="archimate:BusinessActor" name="VP Marketing" id="actor-8"/>
+    <element xsi:type="archimate:BusinessActor" name="Director of Security" id="actor-9"/>
+    <element xsi:type="archimate:BusinessActor" name="Head of DevRel" id="actor-10"/>
+    
+    <!-- Business Roles -->
+    <element xsi:type="archimate:BusinessRole" name="Product Manager" id="role-1">
+      <documentation>Defines product roadmap, prioritizes features, manages backlog based on customer and market needs</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Software Engineer" id="role-2">
+      <documentation>Develops core vCluster features, fixes bugs, optimizes performance</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="DevOps Engineer" id="role-3">
+      <documentation>Manages CI/CD pipelines, cloud infrastructure, and production operations</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Security Engineer" id="role-4">
+      <documentation>Conducts security audits, implements security controls, manages vulnerability response</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Enterprise Account Executive" id="role-5">
+      <documentation>Manages sales cycle for enterprise accounts; quota of $1.5M ARR per rep</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Solutions Architect" id="role-6">
+      <documentation>Provides technical pre-sales support, designs customer architectures, conducts POCs</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Customer Success Manager" id="role-7">
+      <documentation>Owns customer relationship post-sale; drives adoption, renewal, and expansion</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Support Engineer" id="role-8">
+      <documentation>Provides L2/L3 technical support, troubleshoots customer issues, maintains SLAs</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Developer Advocate" id="role-9">
+      <documentation>Creates content, speaks at conferences, engages with community, gathers feedback</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Technical Writer" id="role-10">
+      <documentation>Creates and maintains documentation, tutorials, API references, and knowledge base</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Marketing Manager" id="role-11">
+      <documentation>Executes demand generation campaigns, manages events, builds brand awareness</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Partner Manager" id="role-12">
+      <documentation>Recruits and enables technology and channel partners, manages co-marketing</documentation>
+    </element>
+    
+    <!-- Business Functions -->
+    <element xsi:type="archimate:BusinessFunction" name="Product Development" id="func-1">
+      <documentation>Research, design, build, test, and release product features and improvements</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Platform Operations" id="func-2">
+      <documentation>Operate and maintain production infrastructure, monitoring, and incident response</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Quality Assurance" id="func-3">
+      <documentation>Test planning, automation, performance testing, and release validation</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Security and Compliance" id="func-4">
+      <documentation>Security monitoring, compliance audits, penetration testing, and certification maintenance</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Enterprise Sales" id="func-5">
+      <documentation>Lead generation, qualification, demos, proposal development, contract negotiation</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Partner Management" id="func-6">
+      <documentation>Partner recruitment, enablement, co-selling, and relationship management</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Customer Onboarding" id="func-7">
+      <documentation>Implementation planning, training, migration support, and go-live assistance</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Customer Support" id="func-8">
+      <documentation>Ticket management, technical troubleshooting, escalation handling, and knowledge base maintenance</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Customer Success Management" id="func-9">
+      <documentation>Account planning, health scoring, adoption tracking, renewal management, upsell identification</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Community Engagement" id="func-10">
+      <documentation>Open source community management, contributor onboarding, issue triage, community events</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Content Marketing" id="func-11">
+      <documentation>Blog posts, white papers, case studies, webinars, and technical content creation</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Demand Generation" id="func-12">
+      <documentation>Campaign management, lead nurturing, event marketing, and pipeline generation</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Product Marketing" id="func-13">
+      <documentation>Positioning, messaging, competitive analysis, launch planning, and sales enablement</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Financial Management" id="func-14">
+      <documentation>Budgeting, forecasting, financial reporting, and unit economics analysis</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="People Operations" id="func-15">
+      <documentation>Recruiting, onboarding, performance management, compensation, and culture development</documentation>
+    </element>
+    
+    <!-- Business Processes -->
+    <element xsi:type="archimate:BusinessProcess" name="Product Planning Process" id="proc-1">
+      <documentation>Quarterly roadmap planning incorporating customer feedback, market analysis, and technical feasibility</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Feature Development Lifecycle" id="proc-2">
+      <documentation>Design → Development → Code Review → Testing → Release; 2-week sprints with continuous deployment</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Incident Management Process" id="proc-3">
+      <documentation>Detection → Triage → Investigation → Resolution → Postmortem; P0: 15min response, P1: 1hr response</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Security Vulnerability Response" id="proc-4">
+      <documentation>Discovery → Assessment → Patch Development → Customer Notification → Deployment; <72hr for critical</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Enterprise Sales Process" id="proc-5">
+      <documentation>Lead → Discovery → Technical Evaluation → POC → Business Case → Negotiation → Close; avg 90-120 days</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Customer Onboarding Process" id="proc-6">
+      <documentation>Kickoff → Architecture Design → Installation → Training → Go-Live → Handoff to CSM; 30-day timeline</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Support Ticket Workflow" id="proc-7">
+      <documentation>Submission → Triage → Assignment → Investigation → Resolution → Validation → Closure; SLA by priority</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Renewal Management Process" id="proc-8">
+      <documentation>Health Check (90 days) → Executive Business Review (60 days) → Renewal Proposal (30 days) → Negotiation → Close</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Partner Certification Process" id="proc-9">
+      <documentation>Application → Technical Review → Training → Certification Exam → Listing Approval → Co-Marketing</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Compliance Audit Process" id="proc-10">
+      <documentation>Pre-Audit Preparation → Documentation Review → Technical Testing → Remediation → Certification; annual SOC 2</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Content Creation Workflow" id="proc-11">
+      <documentation>Topic Research → Outline → Draft → Technical Review → Editing → SEO Optimization → Publication → Promotion</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Product Launch Process" id="proc-12">
+      <documentation>Launch Planning → Beta Program → Docs/Training → Marketing Assets → Release → Post-Launch Analysis</documentation>
+    </element>
+    
+    <!-- Business Services -->
+    <element xsi:type="archimate:BusinessService" name="vCluster Platform Service" id="service-1">
+      <documentation>Core virtual cluster provisioning, management, and lifecycle services</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Managed Service Offering" id="service-2">
+      <documentation>Fully-managed vCluster platform with 99.9% SLA and 24/7 operations</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Enterprise Support Service" id="service-3">
+      <documentation>24/7 technical support with guaranteed response times and escalation paths</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Professional Services" id="service-4">
+      <documentation>Implementation, migration, optimization, and custom development services</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Training and Certification" id="service-5">
+      <documentation>Instructor-led training, self-paced courses, and certification programs</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Partner Enablement Service" id="service-6">
+      <documentation>Technical training, sales enablement, and co-selling support for partners</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Community Support Service" id="service-7">
+      <documentation>Self-service support through Slack, GitHub, forums, and documentation</documentation>
+    </element>
+    
+    <!-- Business Objects -->
+    <element xsi:type="archimate:BusinessObject" name="Customer Account" id="obj-1">
+      <documentation>Enterprise customer record with contract details, licenses, and contact information</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Subscription Contract" id="obj-2">
+      <documentation>Legal agreement defining scope, pricing, SLAs, and terms</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Support Ticket" id="obj-3">
+      <documentation>Customer issue record with priority, status, and resolution details</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Feature Requirement" id="obj-4">
+      <documentation>Product requirement document with use cases, acceptance criteria, and technical design</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Sales Opportunity" id="obj-5">
+      <documentation>Potential deal with qualification details, stakeholders, and forecasted close date</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Partner Agreement" id="obj-6">
+      <documentation>Partnership contract defining roles, revenue sharing, and obligations</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessObject" name="Product Release" id="obj-7">
+      <documentation>Software version with features, fixes, release notes, and deployment artifacts</documentation>
+    </element>
+    
+    <!-- Business Events -->
+    <element xsi:type="archimate:BusinessEvent" name="New Customer Sign-Up" id="event-1"/>
+    <element xsi:type="archimate:BusinessEvent" name="Contract Renewal Due" id="event-2"/>
+    <element xsi:type="archimate:BusinessEvent" name="Support Ticket Escalation" id="event-3"/>
+    <element xsi:type="archimate:BusinessEvent" name="Product Release" id="event-4"/>
+    <element xsi:type="archimate:BusinessEvent" name="Security Incident Detected" id="event-5"/>
+    
+    <!-- Locations -->
+    <element xsi:type="archimate:Location" name="San Francisco HQ" id="loc-1">
+      <documentation>Primary office: Engineering, Product, Executive team</documentation>
+    </element>
+    <element xsi:type="archimate:Location" name="Remote Global Team" id="loc-2">
+      <documentation>Distributed workforce across North America, Europe, Asia</documentation>
+    </element>
+    <element xsi:type="archimate:Location" name="AWS US-East-1" id="loc-3">
+      <documentation>Primary cloud region for managed service control plane</documentation>
+    </element>
+    <element xsi:type="archimate:Location" name="AWS EU-West-1" id="loc-4">
+      <documentation>European region for GDPR compliance and data residency</documentation>
+    </element>
+  </folder>
+  
+  <folder name="Relations" id="relations-folder" type="relations">
+    <!-- Goal to Driver Relationships -->
+    <element xsi:type="archimate:InfluenceRelationship" id="rel-1" source="driver-1" target="goal-2" strength="+"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="rel-2" source="driver-2" target="goal-4" strength="+"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="rel-3" source="driver-3" target="goal-1" strength="+"/>
+    
+    <!-- Goal to Capability Relationships -->
+    <element xsi:type="archimate:RealizationRelationship" id="rel-4" source="cap-1" target="goal-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-5" source="cap-9" target="goal-2"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-6" source="cap-6" target="goal-4"/>
+    
+    <!-- Resource to Capability Relationships -->
+    <element xsi:type="archimate:RealizationRelationship" id="rel-7" source="res-1" target="cap-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-8" source="res-3" target="cap-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-9" source="res-7" target="cap-6"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-10" source="res-4" target="cap-9"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-11" source="res-2" target="cap-5"/>
+    
+    <!-- Course of Action to Capability -->
+    <element xsi:type="archimate:RealizationRelationship" id="rel-12" source="action-1" target="cap-9"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-13" source="action-3" target="cap-1"/>
+    <element xsi:type="archimate:RealizationRelationship" id="rel-14" source="action-6" target="cap-10"/>
+    
+    <!-- Actor to Role Assignment -->
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-15" source="actor-4" target="role-2"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-16" source="actor-6" target="role-5"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-17" source="actor-7" target="role-7"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-18" source="actor-9" target="role-4"/>
+    
+    <!-- Role to Function Assignment -->
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-19" source="role-2" target="func-1"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-20" source="role-3" target="func-2"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-21" source="role-4" target="func-4"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-22" source="role-5" target="func-5"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-23" source="role-7" target="func-9"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-24" source="role-8" target="func-8"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-25" source="role-9" target="func-10"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="rel-26" source="role-11" target="func-12"/>
+    
+    <!-- Function to Process Composition -->
+    <element xsi:type="archimate:CompositionRelationship" id="rel-27" source="func-1" target="proc-2"/>
+    <element xsi:type="archimate:CompositionRelationship" id="rel-28" source="func-2" target="proc-3"/>
+    <element xsi:type="archimate:CompositionRelationship" id="rel
